@@ -20,9 +20,7 @@
         <div class="px-3" id="game_buttons">
             <button onclick="toggle_verbs()" type="button" class="btn btn-primary mt-3 w-100 w-sm-auto">See Irregular Verbs</button>
             <button onclick="show_train_all_verbs()" type="button" class="btn btn-primary mt-3 w-100 w-sm-auto">Test yourself ( all verbs )</button>
-            <button type="button" class="btn btn-primary mt-3 w-100 w-sm-auto">Test yourself ( 10 verbs )</button>
-            <button type="button" class="btn btn-primary mt-3 w-100 w-sm-auto">Test yourself ( 20 verbs )</button>
-            <button type="button" class="btn btn-primary mt-3 w-100 w-sm-auto">Choose your verbs and then train yourself</button>
+            <button onclick="show_train_20_verbs()" type="button" class="btn btn-primary mt-3 w-100 w-sm-auto">Test yourself ( 20 verbs )</button>
         </div>
 
         <div id="app">
@@ -55,6 +53,10 @@
 
             <div id="train_verbs_all_verbs" class="d-none is_game w-100 p-3">
 
+              <div class="d-flex justify-content-between align-items-center sticky-top p-3 bg-opacity-25 bg-dark">
+                <button onclick="hide_train_all_verbs()" type="button" class="btn-close" aria-label="Close"></button>
+              </div>
+
                 <div class="w-100 overflow-scroll hide-overflow-scroll">
                     <table class="table" style="min-width: 700px;">
                         <thead>
@@ -72,6 +74,30 @@
                     </table>
                 </div>
             </div>
+
+            <div id="train_verbs_20_verbs" class="d-none is_game w-100 p-3">
+
+              <div class="d-flex justify-content-between align-items-center sticky-top p-3 bg-opacity-25 bg-dark">
+                <button onclick="hide_train_20_verbs()" type="button" class="btn-close" aria-label="Close"></button>
+              </div>
+
+              <div class="w-100 overflow-scroll hide-overflow-scroll">
+                  <table class="table" style="min-width: 700px;">
+                      <thead>
+                        <tr>
+                          <th scope="col">Translation</th>
+                          <th scope="col">Verbal base</th>
+                          <th scope="col">Prétérit</th>
+                          <th scope="col">Present Perfect</th>
+                          <th scope="col">Check</th>
+                        </tr>
+                      </thead>
+                      <tbody id="verbs_train_20_verbs_tbody">
+                        
+                      </tbody>
+                  </table>
+              </div>
+          </div>
             
         </div>
 

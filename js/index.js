@@ -294,7 +294,7 @@ function hide_verbs() {
 }
 
 function hide_train_all_verbs() {
-    document.getElementById("train_verbs__verbs").classList.add("d-none");
+    document.getElementById("train_verbs_all_verbs").classList.add("d-none");
     document.getElementById("verbs_train_all_verbs_tbody").innerHTML = "";
     show_buttons_game();
 }

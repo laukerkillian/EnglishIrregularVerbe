@@ -37,7 +37,7 @@ let irregular_verbs = [
     ["jeter/distribuer", "cast", "cast", "cast"],
     ["attraper", "catch", "caught", "caught"],
     ["gronde", "chide", "chid/chode", "chid/chidden"],
-    ["choisir", "chose", "chose", "chosen"],
+    ["choisir", "choose", "chose", "chosen"],
     ["s'accrocher", "cling", "clung", "clung"],
     ["habiller/recouvrir", "clothe", "clad/clothed", "clad/clothed"],
     ["venir", "come", "came", "come"],
@@ -277,7 +277,7 @@ function hide_buttons_game() {
     document.getElementById("game_buttons").classList.add("d-none");
 }
 
-function show_button_game() {
+function show_buttons_game() {
     document.getElementById("game_buttons").classList.remove("d-none");
 }
 
@@ -290,7 +290,19 @@ function show_verbs() {
 
 function hide_verbs() {
     document.getElementById("verbs").classList.add("d-none");
-    show_button_game();
+    show_buttons_game();
+}
+
+function hide_train_all_verbs() {
+    document.getElementById("train_verbs__verbs").classList.add("d-none");
+    document.getElementById("verbs_train_all_verbs_tbody").innerHTML = "";
+    show_buttons_game();
+}
+
+function hide_train_20_verbs() {
+    document.getElementById("train_verbs_20_verbs").classList.add("d-none");
+    document.getElementById("verbs_train_20_verbs_tbody").innerHTML = "";
+    show_buttons_game();
 }
 
 function thanks_for_rating() {
@@ -378,7 +390,37 @@ function show_train_all_verbs() {
     document.getElementById("train_verbs_all_verbs").classList.remove("d-none");
 }
 
-function hide_train_all_verbs() {
-    show_buttons_game();
-    document.getElementById("train_verbs_all_verbs").classList.add("d-none");
+function random_not_in_list(list, nmax) {
+    while(true){
+        let random = getRandomInt(nmax);
+        if(!list.includes(random)) {
+            return random;
+        }
+    }
+}
+
+function show_train_20_verbs() {
+    score = 0;
+    checked_anwser = 0;
+    hide_buttons_game();
+    used = [];
+    for(k=0;k<=19;k++){
+        index = random_not_in_list(used, irregular_verbs.length);
+        verbs=irregular_verbs[index];
+        used.push(index);
+
+        let random = getRandomInt(4);
+        let el = `
+        <tr check-id="${index}" random-nb="${random}">
+            <td class="fw-bold">${ random == 0 ? verbs[0] : `<input type="text" class="anwser w-100" anwser-id="0"></input>`}</td>
+            <td>${ random == 1 ? verbs[1] : `<input type="text" class="anwser w-100" anwser-id="1"></input>`}</td>
+            <td>${ random == 2 ? verbs[2] : `<input type="text" class="anwser w-100" anwser-id="2"></input>`}</td>
+            <td>${ random == 3 ? verbs[3] : `<input type="text" class="anwser w-100" anwser-id="3"></input>`}</td>
+            <td><button class="btn btn-success" onclick="check_anwser()">Check !</button></td>
+        </tr>
+        `;
+        document.getElementById("verbs_train_20_verbs_tbody").insertAdjacentHTML("beforeend", el);
+    }
+
+    document.getElementById("train_verbs_20_verbs").classList.remove("d-none");
 }

@@ -1,0 +1,79 @@
+.modal > .modal-overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--overlay-background);
+    display: none;
+    z-index: 50;
+}
+
+.modal > .modal-checkbox:checked + .modal-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal > .modal-checkbox {
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    width: 0;
+    display: none;
+}
+
+.modal > .modal-overlay > .modal-dialog {
+    width: 100%;
+    max-width: 500px;
+    background: var(--modal-background);
+    border-radius: 15px;
+}
+
+.modal > .modal-overlay > .modal-dialog > .modal-header {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal > .modal-overlay > .modal-dialog > .modal-header > .modal-btn-close {
+    background: var(--light-main-color);
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background .25s;
+}
+
+.modal > .modal-overlay > .modal-dialog > .modal-header > .modal-btn-close:hover {
+    background: var(--main-color);
+}
+
+.modal > .modal-overlay > .modal-dialog > .modal-header > .modal-title {
+    margin: 0;
+}
+
+.modal > .modal-overlay > .modal-dialog > .modal-header > .modal-btn-close::before {
+    content: " ";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: var(--close-icon);
+}
+
+.modal > .modal-overlay > .modal-dialog > .modal-body {
+    padding: 0 1.5rem;
+}
+
+.modal > .modal-overlay > .modal-dialog > .modal-footer {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+body.modal-open {
+    overflow: hidden;
+}

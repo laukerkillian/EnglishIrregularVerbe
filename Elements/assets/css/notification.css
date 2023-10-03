@@ -1,0 +1,16 @@
+.notification {
+    display: block;
+    padding: 15px;
+}
+
+.notification > div {
+    display: inline-block;
+    background: var(--light-main-color);
+    padding: 15px;
+    border-radius: 15px;
+    color: var(--main-text-color);
+}
+
+.notification-bordered > div {
+    box-shadow: inset 4px 0px 0px 0px var(--sub-main-color);
+}

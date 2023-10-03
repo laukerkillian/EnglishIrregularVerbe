@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- browser head -->
+    <title>Modal - Elements</title>
+
+    <!-- meta require -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="../assets/css/user.css">
+    <link rel="stylesheet" href="../assets/css/modal.css">
+    <link rel="stylesheet" href="../assets/css/button.css">
+    <link rel="stylesheet" href="../assets/css/extra.css">
+</head>
+<body>
+<div class="notification">
+    <div>Veuillez activer le javascript, pour bénéficier de toutes les fonctionnalitées</div>
+</div>
+<input type="checkbox" style="appearance: none; display: none"> <!-- There is some problems on firefox, ( the modal popup for nothing ), so we need to add this line to fix the problem -->
+<label class="btn btn-fill" for="modal">enable modal</label>
+<div class="modal">
+    <input type="checkbox" class="modal-checkbox" id="modal">
+    <div class="modal-overlay">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3 class="modal-title">Titre</h3>
+                <label class="modal-btn-close" for="modal"></label>
+            </div>
+            <div class="modal-body">
+                <div class="separator" style="margin-bottom: 1rem"></div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie iaculis turpis, et posuere lectus gravida nec. Quisque elementum metus id sapien tempor placerat. Fusce vehicula condimentum egestas. Morbi congue erat metus, sit amet ornare ex ultrices vehicula. Aenean rutrum aliquam nulla non ultricies. Vivamus non lorem sit amet leo dignissim dignissim at a magna. Nam semper leo quis lectus tristique faucibus. Phasellus quis laoreet nulla, ut maximus odio. Nullam lacinia tempor elit. Pellentesque sed fermentum quam. Vestibulum quis massa eros. Vestibulum nulla ipsum, varius ac nisl ut, pulvinar lobortis felis. Integer malesuada fermentum mi.
+                <div class="separator" style="margin-top: 1rem"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-fill">Continue !</button>
+                <label class="btn btn-outline" for="modal">Close</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/modals.js"></script>
+</body>
+</html>

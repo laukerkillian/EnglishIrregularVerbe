@@ -1,0 +1,90 @@
+.accordion {
+    width: 100%;
+    position: relative;
+}
+
+.accordion .accordion-item:first-child,
+.accordion .accordion-checkbox-close ~ .accordion-item:nth-child(2) {
+    border: 1px solid var(--border-light);
+    border-radius: 15px 15px 0px 0px;
+}
+
+.accordion .accordion-item:last-child {
+    border: 1px solid var(--border-light);
+    border-radius: 0px 0px 15px 15px;
+}
+
+.accordion > .accordion-item {
+    border-left: 1px solid var(--border-light);
+    border-right: 1px solid var(--border-light);
+    position: relative;
+}
+
+.accordion > .accordion-item > .accordion-header > .accordion-title {
+    margin: 0;
+    display: inline;
+}
+
+.accordion > .accordion-item > .accordion-checkbox {
+    z-index: 1;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.accordion.use-arrow > .accordion-item > .accordion-header::after {
+    content: " ";
+    height: 20px;
+    width: 20px;
+    background: var(--arrow-bottom);
+    display: inline-block;
+}
+
+.accordion.use-arrow > .accordion-item > .accordion-checkbox:checked ~  .accordion-header::after {
+    content: " ";
+    background: var(--arrow-top);
+}
+
+.accordion > .accordion-item > .accordion-checkbox:checked ~ .accordion-body {
+    max-height: 500px;
+    padding: 5px 10px 5px 10px;
+    transition: max-height .25s, padding .25s;
+}
+
+.accordion > .accordion-item > .accordion-body {
+    z-index: 2;
+    max-height: 0;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height .25s, padding .25s;
+}
+
+.accordion > .accordion-checkbox-close {
+    z-index: 2;
+    appearance: none;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.accordion > .accordion-checkbox-close:checked ~  .accordion-item,
+.accordion > .accordion-checkbox-close:checked +  .accordion-item {
+    position: relative;
+    z-index: 3;
+}
+
+.accordion > .accordion-item > .accordion-checkbox:not(:checked) {
+    z-index: 3;
+}
+
+.accordion > .accordion-item > .accordion-header  {
+    z-index: 0;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Components - Elements</title>
+
+    <link rel="stylesheet" href="./assets/css/user.css">
+
+    <link rel="stylesheet" href="./assets/css/accordion.css">
+    <link rel="stylesheet" href="./assets/css/badge.css">
+    <link rel="stylesheet" href="./assets/css/button.css">
+    <link rel="stylesheet" href="./assets/css/checkbox.css">
+    <link rel="stylesheet" href="./assets/css/extra.css">
+    <link rel="stylesheet" href="./assets/css/notification.css">
+    <link rel="stylesheet" href="./assets/css/tooltip.css">
+    <link rel="stylesheet" href="./assets/css/typography.css">
+    <link rel="stylesheet" href="./assets/css/modal.css">
+
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="notification">
+    <div>Veuillez activer le javascript, pour bénéficier de toutes les fonctionnalitées</div>
+</div>
+<div class="notification notification-bordered">
+    <div>Veuillez activer le javascript, pour bénéficier de toutes les fonctionnalitées</div>
+</div>
+<button class="btn btn-outline use-tooltip" title="Create a beautiful forum">Creates !</button>
+<button class="btn btn-fill use-tooltip" title="Create !" placement="top">Creates !</button>
+<h1>Mon titre</h1>
+<p>Petit paragraphe pour commenter les </p>
+<div class="input-button">
+    <input type="text" placeholder="Email address">
+    <button class="btn btn-fill">Envoyer</button>
+</div>
+
+<div style="margin: 15px">
+    <input type="checkbox" class="checkbox" id="checkbox">
+    <label for="checkbox">Activer ma super checkbox !</label>
+</div>
+
+<div style="margin: 15px">
+    <input type="checkbox" class="switch" id="switch">
+    <label for="switch">Activer ma super switch !</label>
+</div>
+
+<div style="margin: 15px">
+    <span class="badge-fill">hello</span>
+    <span class="badge-outline">hello</span>
+    <span class="user-selected">some words</span>
+    <a href="#">Salut</a>
+</div>
+
+<div style="margin: 15px">
+    <h2>Accordion which could be open / close without arrows</h2>
+    <div class="accordion" style="max-width: 500px;">
+        <div class="accordion-item">
+            <input type="checkbox" class="accordion-checkbox">
+            <div class="accordion-header">
+                <h3 class="accordion-title">Accordion title</h3>
+            </div>
+            <div class="accordion-body">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+            </div>
+        </div>
+        <div class="accordion-item">
+            <input type="checkbox" class="accordion-checkbox">
+            <div class="accordion-header">
+                <h3 class="accordion-title">Accordion title</h3>
+            </div>
+            <div class="accordion-body">
+                Hey i'm content in accordion !
+            </div>
+        </div>
+        <div class="accordion-item">
+            <input type="checkbox" class="accordion-checkbox">
+            <div class="accordion-header">
+                <h3 class="accordion-title">Accordion title</h3>
+            </div>
+            <div class="accordion-body">
+                Hey i'm content in accordion !
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="margin: 15px">
+    <h2>Only one pane in same time with arrow</h2>
+    <div class="accordion use-arrow" style="max-width: 500px;">
+        <div class="accordion-item">
+            <input type="radio" checked name="accordion1" class="accordion-checkbox">
+            <div class="accordion-header">
+                <h3 class="accordion-title">Accordion title</h3>
+            </div>
+            <div class="accordion-body">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+            </div>
+        </div>
+        <div class="accordion-item">
+            <input type="radio" name="accordion1" class="accordion-checkbox">
+            <div class="accordion-header">
+                <h3 class="accordion-title">Accordion title</h3>
+            </div>
+            <div class="accordion-body">
+                Hey i'm content in accordion !
+            </div>
+        </div>
+        <div class="accordion-item">
+            <input type="radio" name="accordion1" class="accordion-checkbox">
+            <div class="accordion-header">
+                <h3 class="accordion-title">Accordion title</h3>
+            </div>
+            <div class="accordion-body">
+                Hey i'm content in accordion !
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="margin: 15px">
+    <h2>Only one pane in same time with and pane can closeable arrow</h2>
+    <div class="accordion use-arrow" style="max-width: 500px;">
+        <input type="radio" name="accordion2" class="accordion-checkbox-close">
+        <div class="accordion-item">
+            <input type="radio" checked name="accordion2" class="accordion-checkbox">
+            <div class="accordion-header">
+                <h3 class="accordion-title">Accordion title</h3>
+            </div>
+            <div class="accordion-body">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+            </div>
+        </div>
+        <div class="accordion-item">
+            <input type="radio" name="accordion2" class="accordion-checkbox">
+            <div class="accordion-header">
+                <h3 class="accordion-title">Accordion title</h3>
+            </div>
+            <div class="accordion-body">
+                Hey i'm content in accordion !
+            </div>
+        </div>
+        <div class="accordion-item">
+            <input type="radio" name="accordion2" class="accordion-checkbox">
+            <div class="accordion-header">
+                <h3 class="accordion-title">Accordion title</h3>
+            </div>
+            <div class="accordion-body">
+                Hey i'm content in accordion !
+            </div>
+        </div>
+    </div>
+</div>
+
+<label class="btn btn-fill" for="modal">enable modal</label>
+<div class="modal">
+    <input type="checkbox" class="modal-checkbox" id="modal">
+    <div class="modal-overlay">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3 class="modal-title">Titre</h3>
+                <label class="modal-btn-close" for="modal"></label>
+            </div>
+            <div class="modal-body">
+                <div class="separator" style="margin-bottom: 1rem"></div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie iaculis turpis, et posuere lectus gravida nec. Quisque elementum metus id sapien tempor placerat. Fusce vehicula condimentum egestas. Morbi congue erat metus, sit amet ornare ex ultrices vehicula. Aenean rutrum aliquam nulla non ultricies. Vivamus non lorem sit amet leo dignissim dignissim at a magna. Nam semper leo quis lectus tristique faucibus. Phasellus quis laoreet nulla, ut maximus odio. Nullam lacinia tempor elit. Pellentesque sed fermentum quam. Vestibulum quis massa eros. Vestibulum nulla ipsum, varius ac nisl ut, pulvinar lobortis felis. Integer malesuada fermentum mi.
+                <div class="separator" style="margin-top: 1rem"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-fill">Continue !</button>
+                <label class="btn btn-outline" for="modal">Close</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./assets/js/elements.js"></script>
+<script src="./assets/js/modals.js"></script>
+</body>
+</html>

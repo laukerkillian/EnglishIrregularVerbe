@@ -305,13 +305,6 @@ function hide_train_20_verbs() {
     show_buttons_game();
 }
 
-function thanks_for_rating() {
-    modalRate.hide();
-
-    let modalThanks = new bootstrap.Modal(document.getElementById('thanks_for_rating'));
-    modalThanks.show();
-}
-
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
@@ -330,7 +323,7 @@ function check_anwser() {
             if(child !== null) {
                 child.setAttribute("disabled", true);
                 if(child.value !== null) {
-                    anwsers[i] = child.value.trim();
+                    anwsers[i] = child.value.trim().toLowerCase();
                 }else{
                     anwsers[i] = "";
                 }
@@ -348,7 +341,7 @@ function check_anwser() {
         let nb_correct = 0;
 
         reponse.forEach( rep => {
-            if(anwser_splited.includes(rep.trim())){
+            if(anwser_splited.includes(rep.trim().toLowerCase())){
                 nb_correct++;
             }
         })
